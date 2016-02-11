@@ -2,7 +2,9 @@
 
 ### !!! Use at your own risk !!!!
 
-A collection of my personal hacks for Kibana. You should understand what you are installing before you install it. Here, be the dragons...
+A collection of my personal hacks for Kibana. You should understand what you are installing before you install it.
+
+## Here, be the dragons...
 
 ```
                                                  /===-_---~~~~~~~~~------____
