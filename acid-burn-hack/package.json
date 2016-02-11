@@ -1,7 +1,7 @@
 {
-  "name": "metric_sledgehammer",
+  "name": "acid-burn-hack",
   "version": "0.1.0",
-  "description": "An awesome Kibana plugin",
+  "description": "A Kibana hack for Acid Burn",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp dev",

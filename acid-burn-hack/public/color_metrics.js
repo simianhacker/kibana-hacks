@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
-import 'plugins/metric_sledgehammer/less/main.less';
+import 'plugins/acid-burn-hack/less/main.less';
 import uiModules from 'ui/modules';
 uiModules.get('kibana').config(($provide) => {
 
