@@ -2,7 +2,9 @@ import _ from 'lodash';
 import $ from 'jquery';
 import 'plugins/acid-burn-hack/less/main.less';
 import uiModules from 'ui/modules';
-uiModules.get('kibana').config(($provide) => {
+uiModules.get('kibana').config(($injector, $provide) => {
+
+  if (!$injector.has('visualizeDirective')) return;
 
   var metrics = [
     {
@@ -32,14 +34,14 @@ uiModules.get('kibana').config(($provide) => {
           metrics.forEach((metric) => {
             const matches = series.label.match(metric.name);
             if (matches) {
-              var panelHeading = $el.parent().parent().find('.panel-heading');
+              var panel = $el.parent().parent().parent();
               let lastValue = _.last(series.values);
-              panelHeading.removeClass('sledgehammer-critical');
-              panelHeading.removeClass('sledgehammer-warning');
+              panel.removeClass('sledgehammer-critical');
+              panel.removeClass('sledgehammer-warning');
               if (lastValue.y >= metric.critical) {
-                panelHeading.addClass('sledgehammer-critical');
+                panel.addClass('sledgehammer-critical');
               } else if (lastValue.y >= metric.warning) {
-                panelHeading.addClass('sledgehammer-warning');
+                panel.addClass('sledgehammer-warning');
               }
             }
 

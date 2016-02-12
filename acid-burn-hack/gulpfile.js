@@ -19,7 +19,7 @@ var pkg = require('./package.json');
 var packageName = pkg.name  + '-' + pkg.version;
 
 // relative location of Kibana install
-var pathToKibana = '../kibana';
+var pathToKibana = '../../kibana';
 
 var buildDir = path.resolve(__dirname, 'build');
 var targetDir = path.resolve(__dirname, 'target');

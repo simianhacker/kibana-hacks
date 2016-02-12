@@ -1,17 +1,40 @@
-.panel-default > .panel-heading.sledgehammer-critical {
-  background-color: #900;
-  color: #FFF;
-  .fa {
-    color: #FFF;
-    opacity: 1;
+.gridster .gs-w.sledgehammer-critical {
+  border: 2px solid #900;
+  &:hover {
+    border: 2px dashed #bebebe;
+
+  }
+  dashboard-panel .panel {
+    .panel-heading {
+      background-color: #900;
+      color: #FFF;
+      .fa {
+        color: #FFF;
+        opacity: 1;
+      }
+    }
   }
 }
 
-.gridster dashboard-panel .panel .panel-heading.sledgehammer-critical .panel-title i {
+.gridster .gs-w.sledgehammer-critical dashboard-panel .panel .panel-heading .panel-title i {
   color: #FFF;
   opacity: 1;
 }
 
-.panel-default > .panel-heading.sledgehammer-warning {
-  background-color: #FCBF05;
+.gridster .gs-w.sledgehammer-warning {
+  border: 2px solid #FCBF05;
+  dashboard-panel .panel {
+    .panel-heading {
+      background-color: #FCBF05;
+    }
+  }
 }
+
+.gridster .gs-w.sledgehammer-critical:hover dashboard-panel .panel .panel-heading {
+  color: #7b8a8b;
+  .fa {
+    color: #7b8a8b;
+    opacity: 1;
+  }
+}
+
